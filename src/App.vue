@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="content" v-if="loggedIn">
+      <nav-header></nav-header>
+      <div class="ui tow column grid">
+        <div class="four wide column">
+          <nav-side-bar></nav-side-bar>
+        </div>
+        <div class="twelve wide column" id="view">
+            <router-view />
+        </div>
+      </div>
+    </div>
+    <div v-else><router-view /></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import "../libs/semantic-ui/semantic.min.js";
+import "../libs/semantic-ui/semantic.min.css";
 
+import NavHeader from "./components/nav-bars/NavHeader.vue";
+import NavSideBar from "./components/nav-bars/NavSideBar.vue";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    NavHeader,
+    NavSideBar,
+  },
+  computed: {
+    loggedIn() {
+      return this.$store.getters.getLoggedIn;
+    },
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: 650px;
+}
+#view {
   margin-top: 60px;
+  padding-right: 80px;
 }
 </style>
