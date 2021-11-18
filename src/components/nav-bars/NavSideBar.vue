@@ -19,7 +19,7 @@
       </button>
       <button class="left aligned ui button">
         <i class="icon envelope"></i>
-        Messagerie
+        <router-link to="/messagerie">Messagerie</router-link>
       </button>
       <button class="left aligned ui button">
         <i class="clipboard list icon"></i>

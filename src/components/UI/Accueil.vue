@@ -4,23 +4,93 @@
       <div class="news">
         <!--  -->
         <div class="ui red segment">
-          <h4 class="ui header">A header</h4>
-
           <div class="ui placeholder segment">
             <div class="ui icon header">
               <i class="pdf file outline icon"></i>
-              No documents are listed for this customer.
+              No demandes have been made so far.
             </div>
-            <div class="ui primary button">Add Document</div>
+            <div class="ui primary button">Ask For Document</div>
           </div>
         </div>
       </div>
       <div class="todaySchd">
         <!--  -->
         <div class="ui orange basic segment">
-          <h4 class="ui header">A header</h4>
+          <h2 class="ui header">
+            <i class="newspaper outline icon"></i>
+            <div class="content">Actualités :</div>
+          </h2>
 
-          <div class="ui inverted orange segment">
+          <div class="ui feed">
+            <div class="event">
+              <div class="label">
+                <img
+                  src="https://semantic-ui.com/images/avatar/small/elliot.jpg"
+                />
+              </div>
+              <div class="content">
+                <div class="summary">
+                  <a>Joe Henderson</a> posted
+                  <div class="date">3 days ago</div>
+                </div>
+                <div class="extra text">
+                  Ours is a life of constant reruns. We're always circling back
+                  to where we'd we started, then starting all over again. Even
+                  if we don't run extra laps that day, we surely will come back
+                  for more of the same another day soon.
+                </div>
+                <div class="meta">
+                  <a class="like"> <i class="like icon"></i> 5 Likes </a>
+                </div>
+              </div>
+            </div>
+            <div class="event">
+              <div class="label">
+                <img
+                  src="https://semantic-ui.com/images/avatar/small/jenny.jpg"
+                />
+              </div>
+              <div class="content">
+                <div class="summary">
+                  <a>Joe Henderson</a> posted
+                  <div class="date">3 days ago</div>
+                </div>
+                <div class="extra text">
+                  Ours is a life of constant reruns. We're always circling back
+                  to where we'd we started, then starting all over again. Even
+                  if we don't run extra laps that day, we surely will come back
+                  for more of the same another day soon.
+                </div>
+                <div class="meta">
+                  <a class="like"> <i class="like icon"></i> 5 Likes </a>
+                </div>
+              </div>
+            </div>
+            <div class="event">
+              <div class="label">
+                <img
+                  src="https://semantic-ui.com/images/avatar/small/joe.jpg"
+                />
+              </div>
+              <div class="content">
+                <div class="summary">
+                  <a>Joe Henderson</a> posted
+                  <div class="date">3 days ago</div>
+                </div>
+                <div class="extra text">
+                  Ours is a life of constant reruns. We're always circling back
+                  to where we'd we started, then starting all over again. Even
+                  if we don't run extra laps that day, we surely will come back
+                  for more of the same another day soon.
+                </div>
+                <div class="meta">
+                  <a class="like"> <i class="like icon"></i> 5 Likes </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="ui orange segment">
             <p>
               I'm here to tell you something, and you will probably read me
               first.
@@ -52,7 +122,7 @@
           </div>
           <div class="ui tertiary inverted orange segment">
             <p>If you notice me you must be looking very hard.</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -114,6 +184,9 @@ export default {
 </script>
 
 <style scoped>
+.segment > h2{
+  margin-bottom: 25px;
+}
 #container {
   display: flex;
   flex-direction: column;
@@ -126,12 +199,13 @@ export default {
 }
 #container .row .news {
   flex: 1;
+  height: 300px;
   padding-right: 5px;
 }
 #container .row .todaySchd {
   flex: 2;
   padding-right: 5px;
-  height: 310px;
+  height: 300px;
   overflow-y: scroll;
 }
 #container .attendance {
