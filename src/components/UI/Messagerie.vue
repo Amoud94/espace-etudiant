@@ -5,7 +5,7 @@
         <i class="search icon"></i>
         <input type="text" placeholder="Search..." />
       </div>
-      <button class="ui positive labeled icon button">
+      <button class="ui positive labeled icon button" @click="onSendMessage">
         <i class="add icon"></i>
         Nouveau message
       </button>
@@ -126,12 +126,25 @@
         </tbody>
       </table>
     </div>
+
+    <modal name="messagerie"></modal>
   </div>
 </template>
 
 <script>
 import $ from "jquery";
+import FormMessagerie from "../messagerie_components/FormMessagerie.vue"
 export default {
+  methods: {
+    onSendMessage() {
+      this.$modal.show(FormMessagerie, "messagerie", {
+        height: "auto",
+        adaptive: true,
+        shiftX:1,
+        shiftY:1
+      });
+    },
+  },
   mounted() {
     $(".tabular.menu .item").tab();
   },

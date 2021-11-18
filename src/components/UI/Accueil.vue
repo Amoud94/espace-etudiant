@@ -15,7 +15,7 @@
       </div>
       <div class="todaySchd">
         <!--  -->
-        <div class="ui orange basic segment">
+        <div class="ui orange segment">
           <h2 class="ui header">
             <i class="newspaper outline icon"></i>
             <div class="content">Actualités :</div>
@@ -39,9 +39,7 @@
                   if we don't run extra laps that day, we surely will come back
                   for more of the same another day soon.
                 </div>
-                <div class="meta">
-                  <a class="like"> <i class="like icon"></i> 5 Likes </a>
-                </div>
+                
               </div>
             </div>
             <div class="event">
@@ -61,9 +59,7 @@
                   if we don't run extra laps that day, we surely will come back
                   for more of the same another day soon.
                 </div>
-                <div class="meta">
-                  <a class="like"> <i class="like icon"></i> 5 Likes </a>
-                </div>
+                
               </div>
             </div>
             <div class="event">
@@ -83,9 +79,7 @@
                   if we don't run extra laps that day, we surely will come back
                   for more of the same another day soon.
                 </div>
-                <div class="meta">
-                  <a class="like"> <i class="like icon"></i> 5 Likes </a>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -197,10 +191,12 @@ export default {
   flex-direction: row;
   width: 100%;
 }
-#container .row .news {
-  flex: 1;
-  height: 300px;
+#container .row .news{
   padding-right: 5px;
+}
+#container .row .news .segment {
+  flex: 1;
+  height:100%;
 }
 #container .row .todaySchd {
   flex: 2;
