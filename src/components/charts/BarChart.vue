@@ -20,7 +20,7 @@ export default {
     const dates = this.charData.map((d) => d.date);
     const nbrAbsence = this.charData.map((d) => d.nbrAbsence);
 
-    const { borderColor, pointBorderColor,pointBackgroundColor, backgroundColor } = this.colors;
+    const { backgroundColor } = this.colors;
 
     this.renderChart(
       {
@@ -29,9 +29,6 @@ export default {
           {
             label: this.label,
             data: nbrAbsence,
-            borderColor:borderColor,
-            pointBorderColor:pointBorderColor,
-            pointBackgroundColor:pointBackgroundColor,
             backgroundColor:backgroundColor
           },
         ],

@@ -39,7 +39,10 @@ export default {
   height: 650px;
 }
 #view {
-  margin-top: 60px;
-  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 80px;
+  padding-right: 40px;
 }
 </style>

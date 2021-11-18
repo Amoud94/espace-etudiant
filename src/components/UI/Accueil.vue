@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div class="today_schd">
+      <div class="todaySchd">
         <!--  -->
         <div class="ui orange basic segment">
           <h4 class="ui header">A header</h4>
@@ -113,37 +113,35 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #container {
   display: flex;
-  height: 100%;
   flex-direction: column;
   align-items: center;
 }
 #container .row {
-  flex: 1;
   display: flex;
+  flex-direction: row;
   width: 100%;
 }
-.row .news {
-  flex-grow: 2;
-  margin: 5px;
+#container .row .news {
+  flex: 1;
+  padding-right: 5px;
 }
-.row .today_schd {
-  margin: 5px;
+#container .row .todaySchd {
+  flex: 2;
+  padding-right: 5px;
   height: 310px;
   overflow-y: scroll;
 }
 #container .attendance {
   flex: 1;
   display: flex;
-    margin: 5px;
-
+  margin: 5px;
   width: 100%;
 }
 .attendance .segment {
   width: 100%;
-    margin: 5px;
-
+  margin: 5px;
 }
 </style>

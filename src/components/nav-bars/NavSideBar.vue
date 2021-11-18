@@ -11,7 +11,7 @@
       </button>
       <button class="left aligned ui button">
         <i class="icon book"></i>
-        Coures
+        <router-link to="/cours">Courses</router-link>
       </button>
       <button class="left aligned ui button">
         <i class="icon clipboard check"></i>
@@ -52,7 +52,7 @@ export default {
 .ui.segment {
   height: 100%;
   margin-top: 60px;
-  width: 330px; /* Set the width of the sidebar */
+  width: 320px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -60,6 +60,6 @@ export default {
 }
 .red.button {
   position: relative;
-  bottom: -40%;
+  top: 40%;
 }
 </style>

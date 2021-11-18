@@ -1,16 +1,13 @@
-const webpack = require("webpack");
+import { ProvidePlugin } from "webpack";
 
-module.exports = {
-  configureWebpack: {
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-      }),
-    ],
-  },
-
-  devServer: {
-    port: 8080,
-  },
+export const configureWebpack = {
+  plugins: [
+    new ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
+  ],
+};
+export const devServer = {
+  port: 8080
 };

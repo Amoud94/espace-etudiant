@@ -26,42 +26,56 @@
             </div>
           </div>
         </div>
-        <line-chart
+        <bar-chart
           class="chart"
           label="Absences de cette semaine"
           :colors="color"
           :charData="charData"
           :options="charOptions"
-        ></line-chart>
+        ></bar-chart>
       </div>
     </div>
     <div class="content">
-      <div class="ui padded segment">
-        <h2 class="header">A header</h2>
-
-        <table class="ui very basic table">
+      <div class="ui red padded segment">
+        <div class="header">
+          <h2 class="ui header">
+            <i class="bell outline icon"></i>
+            <div class="content">Messagerie d'absence</div>
+          </h2>
+        </div>
+        <table class="ui selectable basic table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Status</th>
-              <th>Notes</th>
+              <th>Time</th>
+              <th>From</th>
+              <th>Subject</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>John</td>
-              <td>Approved</td>
-              <td>None</td>
+              <td>2021-10-25T10:30</td>
+              <td>Madam Zineb</td>
+              <td>Absence non justifier</td>
             </tr>
             <tr>
-              <td>Jamie</td>
-              <td>Approved</td>
-              <td>Requires call</td>
+              <td>2021-09-05T09:30</td>
+              <td>Mr Hamza</td>
+              <td>Absence non justifier</td>
             </tr>
             <tr>
-              <td>Jill</td>
-              <td>Denied</td>
-              <td>None</td>
+              <td>2021-06-15T08:30</td>
+              <td>Madam Nazha</td>
+              <td>Acces du nombre d'absence</td>
+            </tr>
+            <tr>
+              <td>2021-06-15T08:30</td>
+              <td>Madam Nazha</td>
+              <td>Absence non justifier</td>
+            </tr>
+            <tr>
+              <td>2021-06-15T08:30</td>
+              <td>Madam Nazha</td>
+              <td>Absence non justifier</td>
             </tr>
           </tbody>
         </table>
@@ -73,10 +87,10 @@
 <script>
 import $ from "jquery";
 import momemt from "moment";
-import LineChart from "../charts/LineChart.vue";
+import BarChart from "../charts/BarChart.vue";
 export default {
   components: {
-    LineChart,
+    BarChart,
   },
   data() {
     return {
@@ -86,10 +100,7 @@ export default {
         maintainAspectRatio: false,
       },
       color: {
-        borderColor: "orange",
-        pointBorderColor: "orange",
-        pointBackgroundColor: "white",
-        backgroundColor: "white",
+        backgroundColor: "rgba(255,99,132,0.5)",
       },
     };
   },
@@ -101,7 +112,7 @@ export default {
     },
   },
   beforeMount() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 8; i++) {
       const date = momemt(
         this.randomDate(new Date(2021, 11, 11), new Date()),
         "YYYYMMDD"
@@ -117,7 +128,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped> 
 .container {
   display: flex;
   height: 100%;
@@ -139,5 +150,9 @@ export default {
   flex: 1;
   width: 100%;
   margin: 20px;
+}
+
+.content .header .ui.header {
+  padding-bottom: 14px;
 }
 </style>
