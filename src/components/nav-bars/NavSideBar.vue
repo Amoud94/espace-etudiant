@@ -1,30 +1,30 @@
 <template>
   <div class="ui basic inverted container segment">
     <div class="ui vertical fluid black labeled icon buttons">
-      <button class="left aligned ui button">
-        <i class="icon home"></i>
-        <router-link to="/accueil">Accueil</router-link>
-      </button>
-      <button class="left aligned ui button">
+      <router-link to="/accueil" class="left aligned ui button">
+        <i class="icon flag checkered alternate outline"></i>
+        Accueil
+      </router-link>
+      <router-link to="/emploi" class="left aligned ui button">
         <i class="icon calendar alternate outline"></i>
-        <router-link to="/emploi">Emploi du temps</router-link>
-      </button>
-      <button class="left aligned ui button">
+        Emploi du temps
+      </router-link>
+      <router-link to="/cours" class="left aligned ui button">
         <i class="icon book"></i>
-        <router-link to="/cours">Courses</router-link>
-      </button>
-      <button class="left aligned ui button">
+        Courses
+      </router-link>
+      <router-link to="/evenement" class="left aligned ui button">
         <i class="icon clipboard check"></i>
         Evenement
-      </button>
-      <button class="left aligned ui button">
+      </router-link>
+      <router-link to="/messagerie" class="left aligned ui button">
         <i class="icon envelope"></i>
-        <router-link to="/messagerie">Messagerie</router-link>
-      </button>
-      <button class="left aligned ui button">
+        Messagerie
+      </router-link>
+      <router-link to="/absence" class="left aligned ui button">
         <i class="clipboard list icon"></i>
-        <router-link to="/absence">Absences</router-link>
-      </button>
+        Absences
+      </router-link>
       <button class="left aligned ui button">
         <i class="icon pencil"></i>
         Notes
@@ -50,16 +50,14 @@ export default {
 
 <style scoped>
 .ui.segment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
-  margin-top: 60px;
+  margin-top: 63px;
+  padding-bottom: 90px;
   width: 320px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-}
-.red.button {
-  position: relative;
-  top: 40%;
 }
 </style>
