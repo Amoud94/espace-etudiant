@@ -39,7 +39,7 @@
                   if we don't run extra laps that day, we surely will come back
                   for more of the same another day soon.
                 </div>
-                
+
               </div>
             </div>
             <div class="event">
@@ -59,7 +59,7 @@
                   if we don't run extra laps that day, we surely will come back
                   for more of the same another day soon.
                 </div>
-                
+
               </div>
             </div>
             <div class="event">
@@ -79,7 +79,7 @@
                   if we don't run extra laps that day, we surely will come back
                   for more of the same another day soon.
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -200,8 +200,11 @@ export default {
 }
 #container .row .todaySchd {
   flex: 2;
-  padding-right: 5px;
   height: 300px;
+}
+#container .row .todaySchd .segment {
+	height: 300px;
+	padding-right: 5px;
   overflow-y: scroll;
 }
 #container .attendance {
